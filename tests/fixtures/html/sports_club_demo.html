@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Club Schedule</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SportsEvent",
+        "name": "Morning Swim",
+        "sport": "Swimming",
+        "startDate": "2024-09-02T06:00:00-04:00",
+        "endDate": "2024-09-02T07:30:00-04:00",
+        "location": {
+          "@type": "Place",
+          "name": "Community Pool",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "500 Water Ln",
+            "addressLocality": "Toronto",
+            "addressCountry": "CA"
+          }
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <table class="schedule">
+    <tbody>
+      <tr>
+        <td class="event">Soccer Practice</td>
+        <td class="type">Football</td>
+        <td class="date">2024-09-02T10:00:00-04:00</td>
+        <td class="time">2024-09-02T10:00:00-04:00|2024-09-02T12:00:00-04:00</td>
+        <td class="venue">Club Field</td>
+        <td class="addr">100 Sport Dr</td>
+        <td class="city">Toronto</td>
+        <td class="country">CA</td>
+      </tr>
+      <tr>
+        <td class="event">Evening Run</td>
+        <td class="type">Running</td>
+        <td class="date">2024-09-02T18:00:00-04:00</td>
+        <td class="time">2024-09-02T18:00:00-04:00|2024-09-02T19:00:00-04:00</td>
+        <td class="venue">Lakeside Track</td>
+        <td class="addr">88 Track Ave</td>
+        <td class="city">Toronto</td>
+        <td class="country">CA</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>City Events</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Downtown Concert",
+    "startDate": "2024-09-01T19:00:00-04:00",
+    "endDate": "2024-09-01T22:00:00-04:00",
+    "eventTimeZone": "America/Toronto",
+    "location": {
+      "@type": "Place",
+      "name": "City Hall Plaza",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1 Main St",
+        "addressLocality": "Toronto",
+        "addressCountry": "CA"
+      }
+    }
+  }
+  </script>
+</head>
+<body>
+  <ul class="events">
+    <li>
+      <h3>Food Truck Rally</h3>
+      <time class="start" datetime="2024-09-05T11:00:00-04:00"></time>
+      <time class="end" datetime="2024-09-05T16:00:00-04:00"></time>
+      <div class="venue">Harbourfront Market</div>
+      <div class="addr">22 Lakeshore Blvd</div>
+      <div class="city">Toronto</div>
+      <div class="country">CA</div>
+      <a class="detail" href="https://example.org/events/food-truck"></a>
+    </li>
+    <li>
+      <h3>Art Walk</h3>
+      <time class="start" datetime="2024-09-06T10:00:00-04:00"></time>
+      <time class="end" datetime="2024-09-06T18:00:00-04:00"></time>
+      <div class="venue">Queen Street</div>
+      <div class="addr">Queen St W</div>
+      <div class="city">Toronto</div>
+      <div class="country">CA</div>
+      <a href="https://example.org/events/art-walk"></a>
+    </li>
+    <li>
+      <h3>Harbour Yoga</h3>
+      <time class="start" datetime="2024-09-07T07:00:00-04:00"></time>
+      <time class="end" datetime="2024-09-07T08:30:00-04:00"></time>
+      <div class="venue">Waterfront Park</div>
+      <div class="addr">200 Lakefront Ave</div>
+      <div class="city">Toronto</div>
+      <div class="country">CA</div>
+      <a href="https://example.org/events/yoga"></a>
+    </li>
+  </ul>
+  <a class="next" href="city_events_demo_page2.html">Next</a>
+</body>
+</html>

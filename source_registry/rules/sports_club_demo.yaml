@@ -1,0 +1,13 @@
+selectors:
+  list_item: "table.schedule tbody tr"
+fields:
+  title: "td.event"
+  sport_type: "td.type"
+  start: "td.date"
+  time_slots: "td.time"
+  venue_name: "td.venue"
+  address: "td.addr"
+  city: "td.city"
+  country: "td.country"
+pagination:
+  max_pages: 1

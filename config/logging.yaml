@@ -1,0 +1,26 @@
+version: 1
+formatters:
+  json:
+    (): structlog.stdlib.ProcessorFormatter
+    processors:
+      - structlog.processors.TimeStamper(fmt="iso")
+      - structlog.stdlib.ProcessorFormatter.remove_processors_meta
+      - structlog.processors.JSONRenderer
+    foreign_pre_chain:
+      - structlog.processors.TimeStamper(fmt="iso")
+      - structlog.contextvars.merge_contextvars
+      - structlog.processors.add_log_level
+      - structlog.processors.CallsiteParameterAdder(parameters=("filename", "lineno"))
+handlers:
+  console:
+    class: logging.StreamHandler
+    formatter: json
+    stream: ext://sys.stdout
+loggers:
+  app:
+    level: INFO
+    handlers: [console]
+    propagate: false
+root:
+  level: INFO
+  handlers: [console]

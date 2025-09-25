@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  crawler:
+    build: .
+    image: c4ai-scrpr:latest
+    env_file:
+      - .env.example
+    volumes:
+      - ./data:/app/data
+    command: ["python", "-m", "app.main", "crawl", "--type", "events", "--limit", "10", "--source-id", "all"]
+    depends_on: []

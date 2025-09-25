@@ -1,0 +1,14 @@
+selectors:
+  list_item: "ul.events > li"
+fields:
+  title: "h3"
+  start: "time.start@datetime"
+  end: "time.end@datetime"
+  venue_name: ".venue"
+  address: ".addr"
+  city: ".city"
+  country: ".country"
+  detail_url: "a@href"
+pagination:
+  next_selector: "a.next@href"
+  max_pages: 6

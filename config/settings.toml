@@ -1,0 +1,42 @@
+[app]
+name = "c4ai-scrpr"
+version = "0.1.0"
+data_root = "./data"
+bronze_dir = "./data/bronze"
+silver_dir = "./data/silver"
+gold_dir = "./data/gold"
+quarantine_dir = "./data/quarantine"
+metrics_dir = "./data/metrics"
+
+[fetch]
+user_agent = "c4ai-scrpr/0.1 (+https://example.com/bot)"
+timeout_seconds = 30
+max_concurrency = 5
+max_qps = 2
+retries = 3
+backoff_factor = 2
+retry_http_statuses = [429, 500, 502, 503, 504]
+conditional_get = true
+cache_ttl_seconds = 3600
+
+[scheduler]
+default_cron = "*/5 * * * *"
+run_manifest_dir = "./data/manifests"
+job_checkpoint_dir = "./data/checkpoints"
+backoff_max_seconds = 60
+backoff_multiplier = 2
+
+[[scheduler.jobs]]
+source_type = "events"
+cron = "0 4 * * *"
+limit = 200
+
+[[scheduler.jobs]]
+source_type = "sports"
+cron = "30 2 * * 1"
+limit = 150
+
+[[scheduler.jobs]]
+source_type = "festivals"
+cron = "0 1 * * 0"
+limit = 100

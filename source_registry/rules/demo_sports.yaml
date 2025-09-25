@@ -1,0 +1,13 @@
+selectors:
+  list_item: ".match"
+fields:
+  title: ".title"
+  sport_type: ".sport"
+  time_slots: ".time-slot"
+  venue: ".venue"
+  addr: ".address"
+  city: ".city"
+  country: ".country"
+  images: "img::attr(src)"
+date_scopes:
+  timezone: "America/New_York"

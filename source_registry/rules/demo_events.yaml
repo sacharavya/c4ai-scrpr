@@ -1,0 +1,19 @@
+selectors:
+  list_item: ".event"
+fields:
+  title: ".title"
+  start: ".start"
+  end: ".end"
+  venue: ".venue"
+  addr: ".address"
+  city: ".city"
+  country: ".country"
+  time_slots: ".time-slot"
+  price_text: ".price"
+  organizer: ".organizer"
+  images: "img@src[]"
+pagination:
+  next_selector: "a.next"
+  max_pages: 1
+date_scopes:
+  timezone: "America/New_York"

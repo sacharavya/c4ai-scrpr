@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/event.schema.json",
+  "title": "Event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "title",
+    "start",
+    "end",
+    "timezone",
+    "venue_name",
+    "address",
+    "city",
+    "country",
+    "time_slots"
+  ],
+  "properties": {
+    "source_id": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "start": {"type": "string", "format": "date-time"},
+    "end": {"type": "string", "format": "date-time"},
+    "timezone": {"type": "string", "minLength": 1},
+    "venue_name": {"type": "string", "minLength": 1},
+    "address": {"type": "string", "minLength": 1},
+    "city": {"type": "string", "minLength": 1},
+    "country": {"type": "string", "pattern": "^[A-Z]{2}$"},
+    "time_slots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["start", "end"],
+        "additionalProperties": false,
+        "properties": {
+          "start": {"type": "string", "format": "date-time"},
+          "end": {"type": "string", "format": "date-time"}
+        }
+      }
+    },
+    "price_text": {"type": "string"},
+    "organizer": {"type": "string"},
+    "url": {"type": "string", "format": "uri"},
+    "emails": {"type": "array", "items": {"type": "string", "format": "email"}},
+    "phones": {"type": "array", "items": {"type": "string"}},
+    "images": {"type": "array", "items": {"type": "string", "format": "uri"}},
+    "price_value": {"type": "number"},
+    "taxonomy": {"type": "array", "items": {"type": "string"}}
+  }
+}

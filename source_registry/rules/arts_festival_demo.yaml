@@ -1,0 +1,14 @@
+selectors:
+  list_item: "div.card"
+fields:
+  title: ".title"
+  start: "meta[itemprop='startDate']@content"
+  end: "meta[itemprop='endDate']@content"
+  venue_name: ".loc .name"
+  address: ".loc .addr"
+  city: ".loc .city"
+  country: ".loc .country"
+  images: "img@src[]"
+pagination:
+  month_grid: true
+  max_pages: 3

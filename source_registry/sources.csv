@@ -1,0 +1,6 @@
+source_id,base_url,type,country,robots_ok,sitemap_url,css_rules_path,crawl_freq,max_qps,concurrency,enabled
+demo_events,file://tests/fixtures/html/events_list.html,events,US,true,,source_registry/rules/demo_events.yaml,daily,2,2,true
+demo_sports,file://tests/fixtures/html/sports_list.html,sports,US,true,,source_registry/rules/demo_sports.yaml,daily,1,1,true
+city_events_demo,file://tests/fixtures/html/city_events_demo.html,events,CA,true,,source_registry/rules/city_events_demo.yaml,daily,1,2,true
+arts_festival_demo,file://tests/fixtures/html/arts_festival_demo.html,festivals,CA,true,,source_registry/rules/arts_festival_demo.yaml,weekly,1,1,true
+sports_club_demo,file://tests/fixtures/html/sports_club_demo.html,sports,CA,true,,source_registry/rules/sports_club_demo.yaml,daily,1,2,true

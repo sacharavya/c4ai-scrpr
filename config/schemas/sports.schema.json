@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/sports.schema.json",
+  "title": "SportsEvent",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "title",
+    "sport_type",
+    "time_slots",
+    "venue_name",
+    "address",
+    "city",
+    "country"
+  ],
+  "properties": {
+    "source_id": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "sport_type": {"type": "string", "minLength": 1},
+    "timezone": {"type": "string"},
+    "venue_name": {"type": "string", "minLength": 1},
+    "address": {"type": "string", "minLength": 1},
+    "city": {"type": "string", "minLength": 1},
+    "country": {"type": "string", "pattern": "^[A-Z]{2}$"},
+    "time_slots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["start", "end"],
+        "additionalProperties": false,
+        "properties": {
+          "start": {"type": "string", "format": "date-time"},
+          "end": {"type": "string", "format": "date-time"}
+        }
+      }
+    },
+    "price_text": {"type": "string"},
+    "organizer": {"type": "string"},
+    "url": {"type": "string", "format": "uri"},
+    "emails": {"type": "array", "items": {"type": "string", "format": "email"}},
+    "phones": {"type": "array", "items": {"type": "string"}},
+    "images": {"type": "array", "items": {"type": "string", "format": "uri"}},
+    "price_value": {"type": "number"},
+    "taxonomy": {"type": "array", "items": {"type": "string"}}
+  }
+}
